@@ -1,0 +1,138 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    <!-- Link to the Main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+</head>
+
+<body>
+    <!-- 
+            Name: Aryan Bhalla
+            Course: Software Developement 20S
+            School: Pembina Trails Early College
+            Date Last Modified: 2019-09-22
+            Note: Instead of link the iframe website to the button, i linked the youtube iframe video to the button.
+         -->
+    <!-- Header Starts-->
+    <div id="header">
+        <!-- Top_header starts -->
+        <div id="top_header">
+            <img src="images/logo.png" width="100" height="90" alt="logo of a play button" />
+            <h1><b style="color:#294A96">A</b>ryan <b style="color: #294A96">B</b>halla</h1>
+            <!-- Menu Bar-->
+            <div id="top_nav">
+                <ul>
+                    <a href="#header">Home</a>
+                    <a href="#about-us">About Me</a>
+                    <a href="#services">How To Css</a>
+                    <a href="#contact">Contact Me</a>
+                </ul>
+            </div>
+            <!-- Menu Bar ends-->
+            <div id="login">
+                <ul>
+                    <a href="login.html">Login</a>
+                </ul>
+            </div>
+        </div>
+        <!-- Top_header Ends-->
+        <div id="header_img">
+            <div id="header_info">
+                <h1>Welcome</h1>
+                <p> Hello <b>Everyone</b>, Welcome to my website. I made this website using basic of HTML, Css and some javascript. I completed this website under a 3 days by the help of w<sup>3</sup>school, my fellow peer and my teacher.</p>
+                <button class="button">Read More</button>
+            </div>
+            <img src="images/header_img.png" width="700" height="700" alt="vector images, working on a desk">
+        </div>
+    </div>
+    <!-- Header End -->
+    <!-- about-us starts-->
+    <div id="about-us">
+        <img src="images/about-us.png" width="500" height="500" alt="vector image three people standing together" />
+        <div id="about-info">
+            <u>
+                <h1>About Me</h1>
+            </u>
+            <p>I Started learning web developement when i was 11 years old by the help of my dad since then i am still <i>learning and</i> <u>expaning</u> my knowlage in web developement.</p>
+            <button class="button">Read More</button>
+        </div>
+    </div>
+    <!-- about-us end-->
+    <!-- services starts-->
+    <div id="services">
+        <!-- iframe video from youtube-->
+        <iframe width="500" name="video" height="315" frameborder="0"></iframe>
+
+        <div id="services-info">
+            <u>
+                <h1>How to Css</h1>
+            </u>
+            <p>I displayed this video from youtube using iframes. This video is a basic beginner guide for learning Css. It talk lot about Css and how to can use it towards web developement and make your websites look pretty.
+            </p>
+            <!-- this is the button that trigger the iframe in "How to Css"-->
+            <a class="button_services" target="video" href="https://www.youtube.com/embed/yfoY53QXEnI">View Video</a>
+        </div>
+
+    </div>
+    <!-- services ends-->
+    <div id="contact">
+        <!-- google map iframe-->
+        <iframe width="650" height="400" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=1000%20inovation%20drive%2C%20winnipeg%2C%20manitoba+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0"
+            scrolling="no" marginheight="0" marginwidth="0"><a
+                href="https://www.maps.ie/coordinates.html">gps coordinates finder</a></iframe>
+        <div id="contact-form">
+            <u style="color: aliceblue">
+                <h1 style="color: aliceblue">Get The Job Now</h1>
+            </u>
+            <!-- form starts-->
+            <form method="GET">
+                <!-- input type emails is to input emails in the from -->
+                <input name="Email" type="email" placeholder="Enter You Email">
+                <!-- input type text for inputing a subject in the form-->
+                <input name="Subject" type="text" placeholder="Subject">
+                <br>
+                <!-- textarea is there for inputing messages -->
+                <textarea rows="7" name="Comment" id="textarea" placeholder="Enter Your Message Here"></textarea><br>
+                <!-- input my file is there to upload files-->
+                <p style="color: aliceblue">Select a file:&nbsp;&nbsp;<input type="file" name="myFile">
+                    <!-- button is placed to submit the information-->
+                    <button type="submit" value="Submit" id="submit">Send</button></p>
+            </form>
+            <!-- form ends-->
+        </div>
+    </div>
+    <!-- Footer starts -->
+    <div id="footer">
+        <h3> Coyright &copy;2019 All rights reserved | Developed By Aryan Bhalla</h3>
+    </div>
+    <!-- Footer ends-->
+    <!-- this button top make the user go back to the top, when the user is at the bottom of the page-->
+    <button onclick="topFunction()" id="top" title="Go to top">Top</button>
+    <!-- script for going back to the top. credit: w3school, link: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
+    <script>
+        var mybutton = document.getElementById("top");
+
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- script ends-->
+</body>
+
+</html>

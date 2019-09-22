@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <!--link to  main stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+</head>
+<!-- checkpassword() checkes if the password is typed right in the input-->
+
+<body onload="checkPassword()">
+    <div id="background">
+        <div id="goback">
+            <!-- displayes goback button on the top left coloum that redirect you to home page -->
+            <button onclick="window.location.href = 'index.html'" id="back">Go Back</button>
+        </div>
+        <div id="login_box">
+            <img src="images/login.png" alt="vector images, guy standing with this suitecase">
+            <div id="login_form">
+                <center>
+                    <h1>Login Here</h1>
+                </center>
+                <center>
+                    <P>Enter The Password To Proceed</P>
+                </center>
+                <!-- login form starts-->
+                <form method="GET" action="result.html">
+                    <!-- input type password is for inputing the password -->
+                    <center><input type="password" id="password" placeholder="Enter Your Password"></center><br>
+                    <!-- login button -->
+                    <center><button type="submit" id="inside">Login</button></center>
+                </form>
+                <!-- login form ends-->
+                <!-- tables starts-->
+                <div id="Tables">
+                    <table>
+                        <!-- tables headings-->
+                        <tr>
+                            <th><u>Password</u></th>
+                            <th><u>Steps to Login</u></th>
+                            <th><u>Result</u></th>
+                        </tr>
+                        <!-- table headings end-->
+                        <!-- table data starts-->
+                        <tr>
+                            <td><b>ptec</b></td>
+                            <td>Type password to enable button</td>
+                            <td>You will see a page that says "Welcome"</td>
+                        </tr>
+                        <!-- table data ends-->
+                    </table>
+                </div>
+                <!-- tables ends-->
+            </div>
+        </div>
+        <div>
+            <!-- Script for check password-->
+            <script type="text/javascript">
+                setInterval(checkPassword, 200);
+
+                function checkPassword() {
+                    var str = document.getElementById("password").value;
+                    var button1 = document.getElementById("inside");
+
+                    if (str == "ptec") {
+                        button1.hidden = false;
+
+                    } else {
+                        button1.hidden = true;
+
+                    }
+                }
+            </script>
+            <!-- Script for check password ends-->
+</body>
+
+</html>
